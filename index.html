@@ -23,64 +23,120 @@
     font-family: juli;
   }
 </style>
+
+  
 <body>
-    <header class="text-center absolute top-0 w-[100%] h-[135px] text-sm/13 relative right[20px]" style="background-color: #ADABAB;">
-        <div class="justify-center relative top-[25px]">Home</div>
+
+    <!-- Background video-->    
+    <video autoplay muted loop id="myVideo" style="object-fit: cover; position: fixed; width: 100%">
+    <source src="easypl.mp4" type="video/mp4">
+  </video>
+
+    <!-- Nav Bar-->
+    <header class="text-center absolute top-0 w-[100%] h-[135px] text-sm/13 relative right[20px] top-[0]" style="background-color: #ADABAB; opacity: .8;">
+        <div class="justify-center relative top-[25px]"><a href="#">Home</a></div>
         <div class="col-row flex absolute left-[40%] gap-[50px]">
-            <div>Link1</div>
-            <div>Link2</div>
-            <div>Link2</div>
-            <div>Link2</div>
+            <div><a href="#">Link1</a></div>
+            <div><a href="#">Link2</a></div>
+            <div><a href="#">Link2</a></div>
+            <div><a href="#">Link2</a></div>
         </div>
     </header>
+    
+
+    <!--Name section-->
     <div class="absolute left-[25%] top-[250px] w-[816px] h-[332px] opacity-[50%] " style="background-color: #ADABAB;">
         <p class="text-[24px] text-left ml-[72px] relative top-[10px] left-[8px]">My Name Is</p>
         <h1 class="text-[128px]/30 text-left ml-[64px] justify-center">Robert <br> Scroggins</h1>
 
     </div>
 
-    <div class=" h-[300px] w-[100%] absolute top-[90%]" style="background-color: #f3eba2;">
+    <!--About me-->
+    <div class=" h-[300px] w-[100%] absolute top-[90%]" style="background-color: #f3eba2; opacity: .7;">
         <p class="text-center">About Me</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quibusdam nobis, sint, aspernatur ex nulla distinctio quidem assumenda magnam omnis alias provident quam, ab deleniti temporibus at. Facere soluta voluptates aliquid praesentium repudiandae temporibus? Hic debitis magnam, quo nisi deserunt quibusdam recusandae dignissimos dolore laborum dolores atque libero. A omnis voluptatum error! Recusandae quo commodi nisi obcaecati illum suscipit, quisquam adipisci alias numquam aliquam repellendus. Ea itaque veniam exercitationem. Unde, sapiente! Repellat, pariatur quisquam commodi nisi sint voluptate? Expedita ratione labore iusto! Harum reiciendis, sunt laboriosam, numquam iste nihil quis deleniti, expedita id rem beatae maxime quae rerum minus corporis ullam voluptate consectetur ipsum voluptates cumque optio voluptatem ex nemo. Numquam in aperiam asperiores distinctio? Dolore laudantium soluta facere placeat illo, qui officia pariatur ex similique aliquam nemo. Repellat, esse libero! Corporis ipsam iusto omnis. Sit dolorem molestias labore et?</p>
+        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quibusdam nobis, sint, aspernatur ex nulla distinctio quidem assumenda magnam omnis alias provident quam, ab deleniti temporibus at. Facere soluta voluptates aliquid praesentium repudiandae temporibus? Hic debitis magnam, quo nisi deserunt quibusdam recusandae dignissimos dolore laborum dolores atque libero. A omnis voluptatum error! Recusandae quo commodi nisi obcaecati illum suscipit, quisquam adipisci alias numquam aliquam repellendus. Ea itaque veniam exercitationem. Unde, sapiente! Repellat, pariatur quisquam commodi nisi sint voluptate? Expedita ratione labore iusto! Harum reiciendis, sunt laboriosam, numquam iste nihil quis deleniti, expedita id rem beatae maxime quae rerum minus corporis ullam voluptate consectetur ipsum voluptates cumque optio voluptatem ex nemo. Numquam in aperiam asperiores distinctio? Dolore laudantium soluta facere placeat illo, qui officia pariatur ex similique aliquam nemo. Repellat, esse libero! Corporis ipsam iusto omnis. Sit dolorem molestias labore et?
+</p>
     </div>
-
+<!-- I am currently a junior at Sunny-slope highschool. I enjoy playing basketball and making games in my spare time. Once I graduate college I want to pursue a career in web-development feel free to go through my past projects -->
+    <!--Project section-->
     <div class="flex col-row w-[100%] h-[500px] " style="position: relative; top: 975px;">
-        <div class=" w-[60%] h-[100%] opacity-[70%]" style="background-color: #ADABAB;">
+
+        <!--Displays title of project and a brief description-->
+        <div class=" w-[60%] h-[100%] opacity-[70%]" id="work" style="background-color: #ADABAB;">
             <h2 class="text-center" id="heady">
                 Event-Countdown Project
             </h2>
             <p id="manipo">The purpose of developing this project was to familiar myself with the setInterval function this function is very important and can be useful for a lot of things. That's why we made a website for it</p>
         </div>
 
-        <div id="pics" class="yurp w-[40% ] h-[100%] bg-cover flex relative top-[90]" style="background-image: url(holiday.PNG); background-position: center; ">
+
+        <!--Displays image of project and the buttons to look at the next one-->
+        <div id="pics" class="yurp w-[40% ] h-[100%] bg-cover flex relative top-[90]" style="background-image: url(holiday.PNG); background-position: center; background-size: cover;">
             <p style="opacity: 0;">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhjjjjjjjjjjjjjjjjjjjjjjjkkkkkk </p>
-          <i id="right" class="fa-solid fa-square-caret-right m-0 p-0  text-[75px] z-1 justify-center justify-items-center content-center relative left-[40px]" style=" color: #f3eba2;"></i>
-          <i id="left" class="fa-solid fa-square-caret-left m-0 p-0  text-[75px] z-1 justify-center justify-items-center content-center relative right-[87%]" style=" color: #f3eba2;"></i>
+          <i id="right" class="fa-solid fa-square-caret-right m-0 p-0 clico text-[75px] z-1 justify-center justify-items-center content-center relative left-[40px]" style=" color: #f3eba2;"></i>
+          <i id="left" class="fa-solid fa-square-caret-left m-0 p-0 clico text-[75px] z-1 justify-center justify-items-center content-center relative right-[87%]" style=" color: #f3eba2;"></i>
        
         </div>
     </div>
-   
+
+    <!--FOoter-->
+   <footer class="text-center absolute top-0 w-[100%] h-[135px] text-sm/13 relative right[20px] top-[1050px]" style="background-color: #ADABAB; opacity: .8;">
+        <div class="justify-center relative top-[70px] left-[742px]"><a href="#"><img src="rock.PNG" width="35px" height="25px"></a></div>
+        <div class="col-row flex absolute left-[36.6%] gap-[50px]">
+            <div><a href="#">Github</a></div>
+            <div><a href="#">Instagram</a></div>
+            <div><a href="#">facebook</a></div>
+            <div><a href="#">x</a></div>
+        </div>
+    </footer>
     <script>
         $(document).ready(function(){
+                $("#pics").css("transition", " 1s ")
+                $("h1").css("transition", " 1s ")
+                $("p").css("transition", " 1s ")
+                $("#work").css("transition", "1s ")
+                $("#myVideo").css("height", "100%")
+                $("#myVideo").css("width", "100%")
+                $("#myVideo").css("margin", "0")
+                $("#myVideo").css("padding", "0")
+                $("a").css("padding", "0")
+                $(".clico").css("cursor", "pointer")
 
-                let srcs = ["url(holiday.PNG)", "url(https://tinyurl.com/2563e3b3)", "url(fake.PNG)", "url(wtv.PNG)"]
+                // preps the variables for the image slider
+                let srcs = ["url(holiday.PNG)", "url(https://tinyurl.com/5n7vnm8r)", "url(fake.PNG)", "url(wtv.PNG)"]
                 let descrips = ["The purpose of developing this project was to familiar myself with the setInterval function this function is very important and can be useful for a lot of things. That's why we made a website for it", "This is the Old Portfolio I made at the start of the year the purpose of htis one was to get a genral gist of what I wanted on my actual one", "We did this project to further familiarize outsleves with the things we learned so far and to aslo practice making websites for bussinesses incase we want to be a web developer", "We did this project to get comfortable with a new langauge we learned called tailwind "]
                 let heads = ["Event-Countdown Project", "Old Portfolio", "Fake Business Project", "Tailwind CSS Introduction"]
                 let starting = 0
+
+                // when the right button is clicked change the information for the div according to the starting vasriable
+                // if they lick right when there is no more information to go to it will reutrun to the beginning
                 $("#right").click(function(){
-                    starting++
+                    if(starting == 3){
+                        starting = 0
                     $("#pics").css('background-image', srcs[starting]),
                     $('#manipo').text(descrips[starting])
                     $('#heady').text(heads[starting])
+                    }
+                    // Else just switch the information accordingly
+                    else{
+                         starting++
+                    $("#pics").css('background-image', srcs[starting]),
+                    $('#manipo').text(descrips[starting])
+                    $('#heady').text(heads[starting])
+                    }
+                   
                     
-                })
+                    
+                }) 
+
+                //same for this one as last
                 $("#left").click(function(){
                     console.log("mo")
                    if(starting == 0){
-                    starting =4
-                    $("#pics").css('background-image', srcs[3]),
-                    $('#manipo').text(descrips[3])
-                    $('#heady').text(heads[3])
+                    starting =3
+                    $("#pics").css('background-image', srcs[starting])
+                    $('#manipo').text(descrips[starting])
+                    $('#heady').text(heads[starting])
                     
                     }
                     
