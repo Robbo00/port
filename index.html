@@ -29,7 +29,11 @@
 
     <!-- Background video-->    
     <video autoplay muted loop id="myVideo" class="max-w-[1535px]" style="object-fit: cover; position: fixed; width: 100%">
-    <source src="easypl.mp4" type="video/mp4">
+    <source src="videos/easypl.mp4" type="video/mp4" >
+  </video>
+    
+  <video autoplay muted loop class="max-w-[1535px]" style=" z-index: 0; object-fit: cover; position: fixed; width: 80%; height: 90%; border: solid red 1px; left: 150px; top: 40px;">
+    <source src="" type="video/mp4" id="yes">
   </video>
 
     <!-- Nav Bar-->
@@ -71,7 +75,7 @@
 
 
         <!--Displays image of project and the buttons to look at the next one-->
-        <div id="pics" class="yurp w-[40% ] h-[100%] bg-cover flex relative top-[90]" style="background-image: url(holiday.PNG); background-position: center; background-size: cover;">
+        <div id="pics" appo="videos/holiday.mp4" class="yurp w-[40% ] h-[100%] bg-cover flex relative top-[90]" style="background-image: url(images/holiday.PNG); background-position: center; background-size: cover;">
             <p style="opacity: 0;">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhjjjjjjjjjjjjjjjjjjjjjjjkkkkkk </p>
           <i id="right" class="clico1 fa-solid fa-square-caret-right m-0 p-0 clico text-[75px] z-1 justify-center justify-items-center content-center relative left-[40px] w-[75px] h-[65px] top-[42.9%]" style=" color: #f3eba2;"></i>
           <i id="left" class="clico2 fa-solid fa-square-caret-left m-0 p-0 clico text-[75px] z-1 justify-center justify-items-center content-center relative right-[87%] top-[42.9%] w-[75px] h-[65px]" style=" color: #f3eba2;"></i>
@@ -94,7 +98,7 @@
 
     <!--FOoter-->
    <footer class="text-center absolute top-0 max-w-[1535px] w-[100%] h-[135px] text-sm/13 relative right[20px] top-[1650px]" style="background-color: #ADABAB; opacity: .8;">
-        <div class="justify-center relative top-[70px] left-[742px]"><a href="#"><img src="rock.PNG" width="35px" height="25px"></a></div>
+        <div class="justify-center relative top-[70px] left-[742px]"><a href="#"><img src="images/rock.PNG" width="35px" height="25px"></a></div>
         <div class="col-row flex absolute left-[36.6%] gap-[50px]">
             <div><a href="#">Github</a></div>
             <div><a href="#">Instagram</a></div>
@@ -104,79 +108,86 @@
     </footer>
     <script>
         $(document).ready(function(){
-                $("#pics").css("transition", " 1s ")
-                $(".cus").css("margin-bottom", " 20px ")
-                $("h1").css("transition", " 1s ")
-                $("p").css("transition", " 1s ")
-                $("#work").css("transition", "1s ")
-                $("#myVideo").css("height", "100%")
-                $("#myVideo").css("width", "100%")
-                $("#myVideo").css("max-width", "1535px")
-                $("#myVideo").css("margin", "0")
-                $("#myVideo").css("padding", "0")                
-                $(".clico").css("cursor", "pointer")
-                $(".clico1").mouseover(function(){
-                    $(".clico1").css("color", "#e2dba3")                
-                })
-                $(".clico1").mouseout(function(){
-                    $(".clico1").css("color", "#f3eba2")                
-                })
-                $(".clico2").mouseover(function(){
-                    $(".clico2").css("color", "#e2dba3")                
-                })
-                $(".clico2").mouseout(function(){
-                    $(".clico2").css("color", "#f3eba2")                
-                })
-                $("body").css("border", "solid 1px red")
-                $("body").css("border", "solid 1px red")
-                $("#myVideo").css("border", "solid 1px red")
-
-                // preps the variables for the image slider
-                let srcs = ["url(holiday.PNG)", "url(https://tinyurl.com/5n7vnm8r)", "url(fake.PNG)", "url(wtv.PNG)"]
-                let descrips = ["The purpose of developing this project was to familiar myself with the setInterval function this function is very important and can be useful for a lot of things. That's why we made a website for it", "This is the Old Portfolio I made at the start of the year the purpose of htis one was to get a genral gist of what I wanted on my actual one", "We did this project to further familiarize outsleves with the things we learned so far and to aslo practice making websites for bussinesses incase we want to be a web developer", "We did this project to get comfortable with a new langauge we learned called tailwind "]
-                let heads = ["Event-Countdown Project", "Old Portfolio", "Fake Business Project", "Tailwind CSS Introduction"]
-                let starting = 0
-
-                // when the right button is clicked change the information for the div according to the starting vasriable
-                // if they click right when there is no more information to go to it will reutrun to the beginning
-                $("#right").click(function(){
-                    if(starting == 3){
-                        starting = 0
-                    $("#pics").css('background-image', srcs[starting]),
-                    $('#manipo').text(descrips[starting])
-                    $('#heady').text(heads[starting])
-                    }
-                    // Else just switch the information accordingly
-                    else{
-                         starting++
-                    $("#pics").css('background-image', srcs[starting]),
-                    $('#manipo').text(descrips[starting])
-                    $('#heady').text(heads[starting])
-                    }
-                   
+            
+            $("source").attr("src", "videos/easypl.mp4")
+                
+            $("#pics").css("transition", " 1s ")
+            $(".cus").css("margin-bottom", " 20px ")
+            $("h1").css("transition", " 1s ")
+            $("p").css("transition", " 1s ")
+            $("#work").css("transition", "1s ")
+            $("#myVideo").css("height", "100%")
+            $("#myVideo").css("width", "100%")
+            $("#myVideo").css("max-width", "1535px")
+            $("#myVideo").css("margin", "0")
+            $("#myVideo").css("padding", "0")                
+            $(".clico").css("cursor", "pointer")
+            $(".clico1").mouseover(function(){
+                $(".clico1").css("color", "#e2dba3")                
+            })
+            $(".clico1").mouseout(function(){
+                $(".clico1").css("color", "#f3eba2")                
+            })
+            $(".clico2").mouseover(function(){
+                $(".clico2").css("color", "#e2dba3")                
+            })
+            $(".clico2").mouseout(function(){
+                $(".clico2").css("color", "#f3eba2")                
+            })
+            $("body").css("border", "solid 1px red")
+            $("body").css("border", "solid 1px red")
+            $("#myVideo").css("border", "solid 1px red")
+            // preps the variables for the image slider
+            let vids = ["videos/holiday.mp4",]
+            let srcs = ["url(images/holiday.PNG)", "url(https://tinyurl.com/5n7vnm8r)", "url(images/fake.PNG)", "url(images/wtv.PNG)"]
+            let descrips = ["The purpose of developing this project was to familiar myself with the setInterval function this function is very important and can be useful for a lot of things. That's why we made a website for it", "This is the Old Portfolio I made at the start of the year the purpose of htis one was to get a genral gist of what I wanted on my actual one", "We did this project to further familiarize outsleves with the things we learned so far and to aslo practice making websites for bussinesses incase we want to be a web developer", "We did this project to get comfortable with a new langauge we learned called tailwind "]
+            let heads = ["Event-Countdown Project", "Old Portfolio", "Fake Business Project", "Tailwind CSS Introduction"]
+            let starting = 0
+            
+            $("#pics").click(function(){
+                    $("#yes").attr("src", vids[starting])
                     
-                    
-                })          
-
-                //same for this one as last         
-                $("#left").click(function(){         
-                    console.log("mo")         
-                   if(starting == 0){         
-                    starting =3         
-                    $("#pics").css('background-image', srcs[starting])         
-                    $('#manipo').text(descrips[starting])         
-                    $('#heady').text(heads[starting])         
-                    
-                    }         
-                    
-                    
-                    else{         
-                         starting--         
-                        $("#pics").css('background-image', srcs[starting]),         
-                    $('#manipo').text(descrips[starting])         
-                    $('#heady').text(heads[starting])         
-                    }         
-                })         
+            })
+            
+            // when the right button is clicked change the information for the div according to the starting vasriable
+            // if they click right when there is no more information to go to it will reutrun to the beginning
+            $("#right").click(function(){
+                if(starting == 3){
+                    starting = 0
+                $("#pics").css('background-image', srcs[starting]),
+                $('#manipo').text(descrips[starting])
+                $('#heady').text(heads[starting])
+                }
+                // Else just switch the information accordingly
+                else{
+                     starting++
+                $("#pics").css('background-image', srcs[starting]),
+                $('#manipo').text(descrips[starting])
+                $('#heady').text(heads[starting])
+                }
+               
+                
+                
+            })          
+            //same for this one as last         
+            $("#left").click(function(){         
+                console.log("mo")         
+               if(starting == 0){         
+                starting =3         
+                $("#pics").css('background-image', srcs[starting])         
+                $('#manipo').text(descrips[starting])         
+                $('#heady').text(heads[starting])         
+                
+                }         
+                
+                
+                else{         
+                     starting--         
+                    $("#pics").css('background-image', srcs[starting]),         
+                $('#manipo').text(descrips[starting])         
+                $('#heady').text(heads[starting])         
+                }         
+            })         
         })         
 
     </script>         
