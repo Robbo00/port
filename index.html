@@ -4,188 +4,69 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Robert Scroggins Portfolio</title>
+    <script src="https://cdn.tailwindcss.com"></script>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
     <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
-    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
-    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
-    <style>
-        @font-face {
-            font-family: juli;
-            src: url(JuliusSansOne-Regular.ttf);
-        }
-
-        body {
-            font-family: juli, sans-serif;
-            margin: 0;
-            padding: 0;
-            overflow-x: hidden;
-            background-color: black;
-            color: white;
-        }
-
-        /* Background Video */
-        #myVideo {
-            position: fixed;
-            width: 100%;
-            height: 100vh;
-            object-fit: cover;
-            z-index: -1;
-        }
-
-        /* Navbar */
-        header {
-            width: 100%;
-            height: 80px;
-            background: rgba(75, 75, 75, 0.8);
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            position: fixed;
-            top: 0;
-            z-index: 100;
-        }
-
-        header a {
-            color: white;
-            text-decoration: none;
-            margin: 0 15px;
-            font-size: 18px;
-        }
-
-        /* Name Section */
-        .name-section {
-            position: relative;
-            max-width: 80%;
-            margin: 150px auto 50px;
-            padding: 40px;
-            background: rgba(173, 171, 171, 0.7);
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        .name-section h1 {
-            font-size: 4rem;
-        }
-
-        /* About Section */
-        .about-section {
-            width: 80%;
-            margin: 50px auto;
-            padding: 40px;
-            background: rgba(243, 235, 162, 0.7);
-            text-align: center;
-            border-radius: 10px;
-        }
-
-        /* Project Section */
-        .project-section {
-            display: flex;
-            flex-wrap: wrap;
-            justify-content: center;
-            align-items: center;
-            gap: 20px;
-            width: 80%;
-            margin: 50px auto;
-        }
-
-        .project-description {
-            flex: 1;
-            padding: 20px;
-            background: rgba(173, 171, 171, 0.7);
-            border-radius: 10px;
-        }
-
-        #pics {
-            flex: 1;
-            height: 300px;
-            background-size: cover;
-            background-position: center;
-            border-radius: 10px;
-            transition: background-image 0.5s ease-in-out;
-        }
-
-        /* Contact Section */
-        .contact-section {
-            text-align: center;
-            width: 80%;
-            margin: 50px auto;
-            padding: 40px;
-            background: rgba(252, 248, 210, 0.9);
-            border-radius: 10px;
-        }
-
-        input[type="email"] {
-            padding: 10px;
-            width: 60%;
-            margin: 10px;
-            border: 1px solid black;
-        }
-
-        button {
-            padding: 10px 20px;
-            background: yellow;
-            border: none;
-            cursor: pointer;
-        }
-
-        /* Footer */
-        footer {
-            text-align: center;
-            background: rgba(75, 75, 75, 0.8);
-            padding: 20px;
-            margin-top: 50px;
-        }
-    </style>
 </head>
 
-<body>
+
+<body class="font-sans bg-black text-white overflow-x-hidden">
     <!-- Background Video -->
-    <video autoplay muted loop id="myVideo">
+    <video autoplay muted loop class="fixed w-full h-screen object-cover -z-10">
         <source src="videos/easypl.mp4" type="video/mp4">
     </video>
 
+
     <!-- Navbar -->
-    <header>
-        <a href="#">Home</a>
-        <a href="#">Projects</a>
-        <a href="#">Contact</a>
+    <header class="fixed top-0 w-full h-20 bg-gray-700 bg-opacity-80 flex justify-center items-center z-50">
+        <nav class="flex space-x-6 text-white">
+            <a href="#" class="text-lg hover:text-yellow-400 transition">Home</a>
+            <a href="#" class="text-lg hover:text-yellow-400 transition">Projects</a>
+            <a href="#" class="text-lg hover:text-yellow-400 transition">Contact</a>
+        </nav>
     </header>
 
+
     <!-- Name Section -->
-    <div class="name-section">
+    <section class="relative max-w-4xl mx-auto mt-40 mb-12 p-10 text-center bg-gray-400 bg-opacity-70 rounded-lg">
         <p class="text-2xl">My Name Is</p>
-        <h1>Robert <br> Scroggins</h1>
-    </div>
+        <h1 class="text-6xl font-bold">Robert <br> Scroggins</h1>
+    </section>
+
 
     <!-- About Section -->
-    <div class="about-section">
-        <h2>About Me</h2>
-        <p>I am a junior at sunnyslope highschool, I enjoy coding nd hanging out with friends in my spare time</p>
-    </div>
+    <section class="max-w-4xl mx-auto p-10 bg-yellow-200 bg-opacity-70 text-center rounded-lg">
+        <h2 class="text-3xl font-bold mb-4">About Me</h2>
+        <p class="text-lg">I am a junior at Sunnyslope High School, I enjoy coding and hanging out with friends in my spare time.</p>
+    </section>
+
 
     <!-- Project Section -->
-    <div class="project-section">
-        <div class="project-description">
-            <h2 id="heady">Event-Countdown Project</h2>
-            <p id="manipo">This project helped me learn the setInterval function.</p>
+    <section class="max-w-4xl mx-auto flex flex-wrap items-center justify-center gap-6 my-12">
+        <div class="flex-1 p-6 bg-gray-400 bg-opacity-70 rounded-lg">
+            <h2 id="heady" class="text-2xl font-bold">Event-Countdown Project</h2>
+            <p id="manipo" class="mt-2">This project helped me learn the setInterval function.</p>
         </div>
-        <div id="pics" style="background-image: url(images/holiday.PNG);"></div>
-    </div>
+        <div id="pics" class="flex-1 h-72 bg-cover bg-center rounded-lg transition-all duration-500" style="background-image: url(images/holiday.PNG);"></div>
+    </section>
+
 
     <!-- Contact Section -->
-    <div class="contact-section">
-        <h2>Contact</h2>
-        <p>Want to be informed about my future projects? Input your email to sign up for updates.</p>
-        <form>
-            <input type="email" placeholder="Enter your email">
-            <button type="submit">Submit</button>
+    <section class="max-w-4xl mx-auto p-10 bg-yellow-100 bg-opacity-90 text-center rounded-lg">
+        <h2 class="text-3xl font-bold">Contact</h2>
+        <p class="mt-4">Want to be informed about my future projects? Input your email to sign up for updates.</p>
+        <form class="mt-6">
+            <input type="email" class="w-3/4 p-3 border border-black rounded-md" placeholder="Enter your email">
+            <button type="submit" class="mt-4 px-6 py-3 bg-yellow-400 text-black font-bold rounded-md hover:bg-yellow-500 transition">Submit</button>
         </form>
-    </div>
+    </section>
+
 
     <!-- Footer -->
-    <footer>
-        <p>© 2025 Robert Scroggins</p>
+    <footer class="text-center bg-gray-700 bg-opacity-80 py-6 mt-12">
+        <p class="text-white">© 2025 Robert Scroggins</p>
     </footer>
+
 
     <!-- jQuery for Image Slider -->
     <script>
@@ -197,7 +78,7 @@
             ];
             let descrips = [
                 "This project helped me learn the setInterval function.",
-                "This is the project we did to learn css",
+                "This is the project we did to learn CSS.",
                 "A practice project using Tailwind CSS."
             ];
             let heads = [
@@ -207,11 +88,13 @@
             ];
             let index = 0;
 
+
             function updateSlider() {
                 $("#pics").css('background-image', srcs[index]);
                 $('#manipo').text(descrips[index]);
                 $('#heady').text(heads[index]);
             }
+
 
             setInterval(function() {
                 index = (index + 1) % srcs.length;
