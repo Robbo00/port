@@ -3,193 +3,221 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>Robert Scroggins Portfolio</title>
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-        <script src="https://unpkg.com/@tailwindcss/browser@4"></script>
-        <script
-        src="https://code.jquery.com/jquery-3.7.1.js"
-        integrity="sha256-eKhayi8LEQwp4NKxN+CfCh+3qOVUtJn3QNZ0TciWLP4="
-        crossorigin="anonymous"></script>
-        <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
-        <script src="https://code.jquery.com/jquery-3.6.0.js"></script>
-        <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.js"></script>
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.13.0/themes/smoothness/jquery-ui.css">
+    <script src="https://code.jquery.com/ui/1.13.0/jquery-ui.js"></script>
+    <style>
+        @font-face {
+            font-family: juli;
+            src: url(JuliusSansOne-Regular.ttf);
+        }
+
+        body {
+            font-family: juli, sans-serif;
+            margin: 0;
+            padding: 0;
+            overflow-x: hidden;
+            background-color: black;
+            color: white;
+        }
+
+        /* Background Video */
+        #myVideo {
+            position: fixed;
+            width: 100%;
+            height: 100vh;
+            object-fit: cover;
+            z-index: -1;
+        }
+
+        /* Navbar */
+        header {
+            width: 100%;
+            height: 80px;
+            background: rgba(75, 75, 75, 0.8);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            position: fixed;
+            top: 0;
+            z-index: 100;
+        }
+
+        header a {
+            color: white;
+            text-decoration: none;
+            margin: 0 15px;
+            font-size: 18px;
+        }
+
+        /* Name Section */
+        .name-section {
+            position: relative;
+            max-width: 80%;
+            margin: 150px auto 50px;
+            padding: 40px;
+            background: rgba(173, 171, 171, 0.7);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        .name-section h1 {
+            font-size: 4rem;
+        }
+
+        /* About Section */
+        .about-section {
+            width: 80%;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(243, 235, 162, 0.7);
+            text-align: center;
+            border-radius: 10px;
+        }
+
+        /* Project Section */
+        .project-section {
+            display: flex;
+            flex-wrap: wrap;
+            justify-content: center;
+            align-items: center;
+            gap: 20px;
+            width: 80%;
+            margin: 50px auto;
+        }
+
+        .project-description {
+            flex: 1;
+            padding: 20px;
+            background: rgba(173, 171, 171, 0.7);
+            border-radius: 10px;
+        }
+
+        #pics {
+            flex: 1;
+            height: 300px;
+            background-size: cover;
+            background-position: center;
+            border-radius: 10px;
+            transition: background-image 0.5s ease-in-out;
+        }
+
+        /* Contact Section */
+        .contact-section {
+            text-align: center;
+            width: 80%;
+            margin: 50px auto;
+            padding: 40px;
+            background: rgba(252, 248, 210, 0.9);
+            border-radius: 10px;
+        }
+
+        input[type="email"] {
+            padding: 10px;
+            width: 60%;
+            margin: 10px;
+            border: 1px solid black;
+        }
+
+        button {
+            padding: 10px 20px;
+            background: yellow;
+            border: none;
+            cursor: pointer;
+        }
+
+        /* Footer */
+        footer {
+            text-align: center;
+            background: rgba(75, 75, 75, 0.8);
+            padding: 20px;
+            margin-top: 50px;
+        }
+    </style>
 </head>
-<style>
-@font-face {
-    font-family:juli;
-    src: url(JuliusSansOne-Regular.ttf);
-  }
-  body{
-    font-family: juli;
-  }
-</style>
 
-  
 <body>
+    <!-- Background Video -->
+    <video autoplay muted loop id="myVideo">
+        <source src="videos/easypl.mp4" type="video/mp4">
+    </video>
 
-    <!-- Background video-->    
-    <video autoplay muted loop id="myVideo" class="max-w-[1535px]" style="object-fit: cover; position: fixed; width: 100%">
-    <source src="videos/easypl.mp4" type="video/mp4" >
-  </video>
-    
-  <video autoplay muted loop class="max-w-[1535px]" style=" z-index: 0; object-fit: cover; position: fixed; width: 80%; height: 90%; border: solid red 1px; left: 150px; top: 40px;">
-    <source src="" type="video/mp4" id="yes">
-  </video>
-
-    <!-- Nav Bar-->
-    <header class="max-w-[1535px] text-center absolute top-0 w-[100%] h-[135px] text-sm/13 relative right[20px] top-[0]" style="background-color: #ADABAB; opacity: .8;">
-        <div class="justify-center relative top-[25px]"><a href="#">Home</a></div>
-        <div class="col-row flex absolute left-[40%] gap-[50px]">
-            <div><a href="#">Link1</a></div>
-            <div><a href="#">Link2</a></div>
-            <div><a href="#">Link2</a></div>
-            <div><a href="#">Link2</a></div>
-        </div>
+    <!-- Navbar -->
+    <header>
+        <a href="#">Home</a>
+        <a href="#">Projects</a>
+        <a href="#">Contact</a>
     </header>
-    
 
-    <!--Name section-->
-    <div class="absolute left-[25%] top-[250px] w-[816px] h-[332px] opacity-[50%] " style="background-color: #ADABAB;">
-        <p class="text-[24px] text-left ml-[72px] relative top-[10px] left-[8px]">My Name Is</p>
-        <h1 class="text-[128px]/30 text-left ml-[64px] justify-center">Robert <br> Scroggins</h1>
-
+    <!-- Name Section -->
+    <div class="name-section">
+        <p class="text-2xl">My Name Is</p>
+        <h1>Robert <br> Scroggins</h1>
     </div>
 
-    <!--About me-->
-    <div class="max-w-[1535px] h-[300px] w-[100%] absolute top-[90%]" style="background-color: #f3eba2; opacity: .7;">
-        <p class="text-center">About Me</p>
-        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Ratione quibusdam nobis, sint, aspernatur ex nulla distinctio quidem assumenda magnam omnis alias provident quam, ab deleniti temporibus at. Facere soluta voluptates aliquid praesentium repudiandae temporibus? Hic debitis magnam, quo nisi deserunt quibusdam recusandae dignissimos dolore laborum dolores atque libero. A omnis voluptatum error! Recusandae quo commodi nisi obcaecati illum suscipit, quisquam adipisci alias numquam aliquam repellendus. Ea itaque veniam exercitationem. Unde, sapiente! Repellat, pariatur quisquam commodi nisi sint voluptate? Expedita ratione labore iusto! Harum reiciendis, sunt laboriosam, numquam iste nihil quis deleniti, expedita id rem beatae maxime quae rerum minus corporis ullam voluptate consectetur ipsum voluptates cumque optio voluptatem ex nemo. Numquam in aperiam asperiores distinctio? Dolore laudantium soluta facere placeat illo, qui officia pariatur ex similique aliquam nemo. Repellat, esse libero! Corporis ipsam iusto omnis. Sit dolorem molestias labore et?
-</p>
+    <!-- About Section -->
+    <div class="about-section">
+        <h2>About Me</h2>
+        <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Aspernatur, tempore!</p>
     </div>
-<!-- I am currently a junior at Sunny-slope highschool. I enjoy playing basketball and making games in my spare time. Once I graduate college I want to pursue a career in web-development feel free to go through my past projects -->
-    <!--Project section-->
-    <div class="flex col-row w-[100%] h-[500px] " style="position: relative; top: 975px;">
 
-        <!--Displays title of project and a brief description-->
-        <div class=" w-[60%] max-w-[776px] h-[100%] opacity-[70%]" id="work" style="background-color: #ADABAB;">
-            <h2 class="text-center" id="heady">
-                Event-Countdown Project
-            </h2>
-            <p id="manipo">The purpose of developing this project was to familiar myself with the setInterval function this function is very important and can be useful for a lot of things. While making this we had to find a way to incorporate the function so we can see it countdown live</p>
+    <!-- Project Section -->
+    <div class="project-section">
+        <div class="project-description">
+            <h2 id="heady">Event-Countdown Project</h2>
+            <p id="manipo">This project helped me learn the setInterval function.</p>
         </div>
-
-
-        <!--Displays image of project and the buttons to look at the next one-->
-        <div id="pics" appo="videos/holiday.mp4" class="yurp w-[40% ] h-[100%] bg-cover flex relative top-[90]" style="background-image: url(images/holiday.PNG); background-position: center; background-size: cover;">
-            <p style="opacity: 0;">hhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhhjjjjjjjjjjjjjjjjjjjjjjjkkkkkk </p>
-          <i id="right" class="clico1 fa-solid fa-square-caret-right m-0 p-0 clico text-[75px] z-1 justify-center justify-items-center content-center relative left-[40px] w-[75px] h-[65px] top-[42.9%]" style=" color: #f3eba2;"></i>
-          <i id="left" class="clico2 fa-solid fa-square-caret-left m-0 p-0 clico text-[75px] z-1 justify-center justify-items-center content-center relative right-[87%] top-[42.9%] w-[75px] h-[65px]" style=" color: #f3eba2;"></i>
-       
-        </div>
-    </div>
-    
-    <div id="cont" class="text-center absolute top-[1745px] left-[29.7%] w-[650px] h-[170px] "  style="background-color: #fcf8d2; opacity: .9;">
-        
-    </div>
-    <div style="opacity: 1;" id="cont" class="text-center absolute top-[1745px] left-[29.7%] w-[650px] h-[270px] ">
-        <div class="flex flex-col mb-[90px]">
-        <p class="cus mb-[5px]"> contact </p>
-        <P class="cus">if you want to be informed about my future projects input your email to sign up for the monthly update</P>
-        <form class="text-center relative left-[20px] cus">
-            <input type="email" class="relative left-[41px]" placeholder="Input your email">
-            <button type="submit" class="relative right-[115px] top-[30px] bg-yellow-100 w-[85px] rounded-sm">Submit</button>
-        </form></div>
+        <div id="pics" style="background-image: url(images/holiday.PNG);"></div>
     </div>
 
-    <!--FOoter-->
-   <footer class="text-center absolute top-0 max-w-[1535px] w-[100%] h-[135px] text-sm/13 relative right[20px] top-[1650px]" style="background-color: #ADABAB; opacity: .8;">
-        <div class="justify-center relative top-[70px] left-[742px]"><a href="#"><img src="images/rock.PNG" width="35px" height="25px"></a></div>
-        <div class="col-row flex absolute left-[36.6%] gap-[50px]">
-            <div><a href="#">Github</a></div>
-            <div><a href="#">Instagram</a></div>
-            <div><a href="#">facebook</a></div>
-            <div><a href="#">x</a></div>
-        </div>
+    <!-- Contact Section -->
+    <div class="contact-section">
+        <h2>Contact</h2>
+        <p>Want to be informed about my future projects? Input your email to sign up for updates.</p>
+        <form>
+            <input type="email" placeholder="Enter your email">
+            <button type="submit">Submit</button>
+        </form>
+    </div>
+
+    <!-- Footer -->
+    <footer>
+        <p>© 2025 Robert Scroggins</p>
     </footer>
+
+    <!-- jQuery for Image Slider -->
     <script>
         $(document).ready(function(){
-            
-            $("source").attr("src", "videos/easypl.mp4")
-                
-            $("#pics").css("transition", " 1s ")
-            $(".cus").css("margin-bottom", " 20px ")
-            $("h1").css("transition", " 1s ")
-            $("p").css("transition", " 1s ")
-            $("#work").css("transition", "1s ")
-            $("#myVideo").css("height", "100%")
-            $("#myVideo").css("width", "100%")
-            $("#myVideo").css("max-width", "1535px")
-            $("#myVideo").css("margin", "0")
-            $("#myVideo").css("padding", "0")                
-            $(".clico").css("cursor", "pointer")
-            $(".clico1").mouseover(function(){
-                $(".clico1").css("color", "#e2dba3")                
-            })
-            $(".clico1").mouseout(function(){
-                $(".clico1").css("color", "#f3eba2")                
-            })
-            $(".clico2").mouseover(function(){
-                $(".clico2").css("color", "#e2dba3")                
-            })
-            $(".clico2").mouseout(function(){
-                $(".clico2").css("color", "#f3eba2")                
-            })
-            $("body").css("border", "solid 1px red")
-            $("body").css("border", "solid 1px red")
-            $("#myVideo").css("border", "solid 1px red")
-            // preps the variables for the image slider
-            let vids = ["videos/holiday.mp4",]
-            let srcs = ["url(images/holiday.PNG)", "url(https://tinyurl.com/5n7vnm8r)", "url(images/fake.PNG)", "url(images/wtv.PNG)"]
-            let descrips = ["The purpose of developing this project was to familiar myself with the setInterval function this function is very important and can be useful for a lot of things. That's why we made a website for it", "This is the Old Portfolio I made at the start of the year the purpose of htis one was to get a genral gist of what I wanted on my actual one", "We did this project to further familiarize outsleves with the things we learned so far and to aslo practice making websites for bussinesses incase we want to be a web developer", "We did this project to get comfortable with a new langauge we learned called tailwind "]
-            let heads = ["Event-Countdown Project", "Old Portfolio", "Fake Business Project", "Tailwind CSS Introduction"]
-            let starting = 0
-            
-            $("#pics").click(function(){
-                    $("#yes").attr("src", vids[starting])
-                    
-            })
-            
-            // when the right button is clicked change the information for the div according to the starting vasriable
-            // if they click right when there is no more information to go to it will reutrun to the beginning
-            $("#right").click(function(){
-                if(starting == 3){
-                    starting = 0
-                $("#pics").css('background-image', srcs[starting]),
-                $('#manipo').text(descrips[starting])
-                $('#heady').text(heads[starting])
-                }
-                // Else just switch the information accordingly
-                else{
-                     starting++
-                $("#pics").css('background-image', srcs[starting]),
-                $('#manipo').text(descrips[starting])
-                $('#heady').text(heads[starting])
-                }
-               
-                
-                
-            })          
-            //same for this one as last         
-            $("#left").click(function(){         
-                console.log("mo")         
-               if(starting == 0){         
-                starting =3         
-                $("#pics").css('background-image', srcs[starting])         
-                $('#manipo').text(descrips[starting])         
-                $('#heady').text(heads[starting])         
-                
-                }         
-                
-                
-                else{         
-                     starting--         
-                    $("#pics").css('background-image', srcs[starting]),         
-                $('#manipo').text(descrips[starting])         
-                $('#heady').text(heads[starting])         
-                }         
-            })         
-        })         
+            let srcs = [
+                "url(images/holiday.PNG)",
+                "url(images/fake.PNG)",
+                "url(images/wtv.PNG)"
+            ];
+            let descrips = [
+                "This project helped me learn the setInterval function.",
+                "This is the project we did to learn css",
+                "A practice project using Tailwind CSS."
+            ];
+            let heads = [
+                "Event-Countdown Project",
+                "Business Project",
+                "Tailwind CSS Project"
+            ];
+            let index = 0;
 
-    </script>         
-</body>         
-</html>         
+            function updateSlider() {
+                $("#pics").css('background-image', srcs[index]);
+                $('#manipo').text(descrips[index]);
+                $('#heady').text(heads[index]);
+            }
+
+            setInterval(function() {
+                index = (index + 1) % srcs.length;
+                updateSlider();
+            }, 3000);
+        });
+    </script>
+</body>
+</html>
